@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* defualt behaviour for links */
+a:link, a:visited {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:active {
+  color: #14113f;
+}
+
+:root {
+  --primary-color: #25233c; /* Bright Blue for Buttons, links, and key elements to draw attention. */
+  --secondary-color: #e3cbc1; /* Vibrant Coral for Secondary buttons, highlights, and hover states*/
+  --background-color: #90a2c5; /* Soft Light Gray for Page background, to provide a clean and minimalist canvas*/
+  --text-color: #dbdbe3; /* Charcoal Gray for Main body text, headings, and general content*/
+  --muted-text-color: #6C757D; /* Cool Gray for Subtext, meta information, and less prominent text.*/
+  --highlight-color: #963569; /* Bright Yellow for Highlights, important notices, and call-to-action elements*/
+  --border-color: #5764b7; /* Light Gray for Borders, dividers, and subtle backgrounds for cards or sections*/
+  --font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.primery-header {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+/* navbar styling */
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list li {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-bottom: 2px none;
+  padding: 0.75rem 0;
+  border-top: 0.5rem solid var(--border-color);
+  
+  transition: all 0.3s ease;
+}
+
+.nav-list li a {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+  height: 100%;
+  color: var(--primary-color);
+}
+
+.nav-list li:hover{
+  background-color: #6987c2;
+}
+.nav-list li:active{
+  background-color: #6987c2;
+}
+
+.nav-list li:hover a{
+  color: var(--text-color);
+}
+
+.primery-header .nav-list .active a {
+  color: var(--text-color);
+}
+
+.primery-header .nav-list .active{
+  background-color: #6987c2;
+}
+
+
+
+/* media queries */
+@media only screen and (max-width: 1200px) {
+  p {
+    display: inline;
+  }
+}
