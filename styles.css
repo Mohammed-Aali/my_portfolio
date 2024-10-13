@@ -4,7 +4,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: 1px solid red;
 }
+
 
 /* defualt behaviour for links */
 a:link, a:visited {
@@ -154,7 +156,7 @@ body {
 .cta-button {
   background: linear-gradient(135deg, var(--border-color), #2575fc);
   color: var(--text-color);
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 10px;
@@ -904,13 +906,6 @@ input.check-toggle-round-flat:checked + label:after {
   margin-left: 44px;
 }
 
-@media screen and (max-width: 768px) {
-  #container {
-    margin: 20px auto;
-    width: 95%;
-  }
-}
-
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 26px;
@@ -922,6 +917,10 @@ input.check-toggle-round-flat:checked + label:after {
   
   #form_button {
     padding: 15px 25px;
+  }
+
+  .personal-image img {
+    max-width: 120px;
   }
 }
 
@@ -942,6 +941,26 @@ input.check-toggle-round-flat:checked + label:after {
   input[type='text'], [type='email'], select, textarea {
     font-size: 0.875em;
   }
+
+  .personal-image img {
+    margin-left: -15px;
+  }
+
+  .column-1 h1, .column-1 .name, .column-1 .intro {
+    font-size: 1.4rem;
+  }
+
+  .column-1 .intro {
+    width: 200px;
+  }
+
+  .cta-button {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .portfolio-content input:checked + label {
+    width: 280px;
+  };
 }
 
 /* media queries */
@@ -972,9 +991,7 @@ input.check-toggle-round-flat:checked + label:after {
   .main-layout {
     margin-top: 4.8rem;
   }
-  .personal-image img {
-    max-width: 170px;
-  }
+
   .primery-header {
     display: flex;
     flex-direction: row-reverse;
@@ -1066,6 +1083,11 @@ input.check-toggle-round-flat:checked + label:after {
   .contact-section {
     margin-top: -2rem;
     padding-top: 2rem;
+  }
+
+  #container {
+    margin: 20px auto;
+    width: 95%;
   }
 }
 
