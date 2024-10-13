@@ -41,16 +41,10 @@ body.addEventListener('click', (event) => {
 
 serviceLinks.forEach(link => {
     link.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default anchor behavior
-
-        // Get the service from data attribute
+        event.preventDefault(); 
         const service = this.getAttribute('data-service');
-        
-        // Set the service dropdown to the selected service
         const serviceDropdown = document.querySelector('#service_input');
         serviceDropdown.value = service;
-
-        // Scroll to the contact section smoothly
         document.querySelector('#contact-me').scrollIntoView({ behavior: 'smooth' });
     });
 })
